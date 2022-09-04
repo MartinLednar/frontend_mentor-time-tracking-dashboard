@@ -1,0 +1,112 @@
+/*---------Work box----------*/
+
+.activity-box {
+  border-radius: 23px;
+  background-image: linear-gradient(var(--work-red) 100px, var(--dark-blue) 20px);
+  position: relative;
+  overflow: hidden;
+  overflow-x: visible;
+  display: flex;
+
+  &.work {
+    background-image: linear-gradient(var(--work-red) 100px, var(--dark-blue) 20px);
+  }
+
+  &.play {
+    background-image: linear-gradient(var(--play-blue) 100px, var(--dark-blue) 20px);
+  }
+
+  &.study {
+    background-image: linear-gradient(var(--study-red) 100px, var(--dark-blue) 20px);
+  }
+
+  &.exercise {
+    background-image: linear-gradient(var(--green) 100px, var(--dark-blue) 20px);
+  }
+
+  &.social {
+    background-image: linear-gradient(var(--violet) 100px, var(--dark-blue) 20px);
+  }
+
+  &.self-care {
+    background-image: linear-gradient(var(--orange) 100px, var(--dark-blue) 20px);
+  }
+
+  & > img {
+    position: absolute;
+    height: 95px;
+    width: 95px;
+    right: 20px;
+    top: -8px;
+  }
+
+  &.exercise > img {
+    height: 25%;
+    width: auto;
+  }
+
+  &.social > img {
+    height: auto;
+    width: auto;
+  }
+
+  .activity-description {
+    height: 80%;
+    width: 100%;
+    padding: 30px 30px 45px;
+    margin-top: auto;
+    z-index: 2;
+    color: white;
+    border-radius: 23px;
+    background-color: var(--dark-blue);
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #34397b;
+    }
+
+    .title-box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      h2 {
+        font-weight: 400;
+        font-size: 23px;
+      }
+      img:hover {
+        filter: brightness(200%);
+        cursor: pointer;
+      }
+    }
+
+    .time-box {
+      height: 100%;
+      margin-top: 25px;
+      display: flex;
+      flex-direction: column;
+
+      h3 {
+        font-size: 68px;
+        font-weight: 300;
+        margin-bottom: auto;
+      }
+
+      span {
+        color: var(--desaturated-blue);
+        font-size: 18px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1100px) {
+    .time-box {
+      flex-direction: row !important;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 10px !important;
+    }
+  }
+}
